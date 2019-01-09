@@ -79,7 +79,7 @@ class TestLocationUtil(TestCase):
 
     @requests_mock.Mocker()
     @patch('homeassistant.util.location._get_ipapi', return_value=None)
-    def test_detect_location_info_ipapi(self, mock_req, mock_ipapi):
+    def test_detect_location_info_ip_api(self, mock_req, mock_ipapi):
         """Test detect location info using ip-api.com."""
         mock_req.get(
             location_util.IP_API, text=load_fixture('ip-api.com.json'))
